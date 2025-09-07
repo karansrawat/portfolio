@@ -32,10 +32,10 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-7YZDXYEKSV');
 </script>
 <body class="bg-gradient-to-b from-black via-gray-900 to-black text-white font-sans antialiased relative">
+
   <!-- Header -->
   <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur border-b border-white/20">
     <div class="container mx-auto flex items-center justify-between px-6 py-4">
@@ -43,27 +43,32 @@
         KARAN
         <i data-lucide="coffee" class="animate-float group-hover:text-gray-400 transition"></i>
       </h1>
-      <nav>
-        <ul class="flex gap-6 text-sm uppercase font-semibold">
-          <li><a href="#home" class="hover:text-gray-400 transition">Home</a></li>
-          <li><a href="#about" class="hover:text-gray-400 transition">About</a></li>
-          <li><a href="#projects" class="hover:text-gray-400 transition">Projects</a></li>
-          <li><a href="#skills" class="hover:text-gray-400 transition">Skills</a></li>
-          <li><a href="#documents" class="hover:text-gray-400 transition">Resume</a></li>
-          <li><a href="#contact" class="hover:text-gray-400 transition">Contact</a></li>
-          <li><a href="https://open.spotify.com/user/karansr?si=4f0231a6eab24a19" target="_blank" class="hover:text-gray-400 transition">Spotify</a></li>
-        </ul>
-      </nav>
+
+      <!-- Hamburger for Mobile -->
+      <button id="menuBtn" class="sm:hidden focus:outline-none">
+        <i data-lucide="menu" class="text-white"></i>
+      </button>
+
+      <!-- Navigation -->
+      <ul id="menu" class="hidden sm:flex flex-col sm:flex-row gap-6 text-sm uppercase font-semibold absolute sm:static top-16 left-0 w-full sm:w-auto bg-black/90 sm:bg-transparent p-6 sm:p-0 z-50">
+        <li><a href="#home" class="hover:text-gray-400 transition block sm:inline">Home</a></li>
+        <li><a href="#about" class="hover:text-gray-400 transition block sm:inline">About</a></li>
+        <li><a href="#projects" class="hover:text-gray-400 transition block sm:inline">Projects</a></li>
+        <li><a href="#skills" class="hover:text-gray-400 transition block sm:inline">Skills</a></li>
+        <li><a href="#documents" class="hover:text-gray-400 transition block sm:inline">Resume</a></li>
+        <li><a href="#contact" class="hover:text-gray-400 transition block sm:inline">Contact</a></li>
+        <li><a href="https://open.spotify.com/user/karansr?si=4f0231a6eab24a19" target="_blank" class="hover:text-gray-400 transition block sm:inline">Spotify</a></li>
+      </ul>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section id="home" class="h-screen flex items-center justify-center text-center relative overflow-hidden">
-      <div class="max-w-2xl px-6">
-        <h2 class="text-6xl font-extrabold mb-6 leading-tight">Hey, I'm <span class="text-gray-200 underline decoration-white whitespace-nowrap">Karan Singh Rawat</span></h2>
-        <p class="text-xl text-gray-300 mb-8">A passionate <span class="text-white font-bold">Software Developer</span> crafting impactful digital experiences.</p>
-        <a href="#projects" class="inline-block bg-white text-black px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">See My Work</a>
+    <section id="home" class="h-screen flex items-center justify-center text-center relative overflow-hidden px-4 sm:px-0">
+      <div class="max-w-2xl">
+        <h2 class="text-4xl sm:text-6xl font-extrabold mb-6 leading-tight">Hey, I'm <span class="text-gray-200 underline decoration-white whitespace-nowrap">Karan Singh Rawat</span></h2>
+        <p class="text-lg sm:text-xl text-gray-300 mb-8">A passionate <span class="text-white font-bold">Software Developer</span> crafting impactful digital experiences.</p>
+        <a href="#projects" class="inline-block bg-white text-black px-6 sm:px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">See My Work</a>
       </div>
     </section>
 
@@ -76,58 +81,52 @@
           <p class="text-gray-300 mt-4">I am driven by a passion for clean code, intuitive design, and continuous learning, always seeking opportunities to apply my skills to solve real-world problems.</p>
         </div>
         <div class="flex justify-center">
-          <img src="picture.jpg" alt="Karan profile" class="w-72 h-72 object-cover rounded-full border-4 border-white/20 shadow-lg hover:scale-105 transition" />
+          <img src="picture.jpg" alt="Karan profile" class="w-56 sm:w-72 h-56 sm:h-72 object-cover rounded-full border-4 border-white/20 shadow-lg hover:scale-105 transition" />
         </div>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" class="bg-white/10 py-24 reveal">
-  <div class="container mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-12 text-center">Projects</h3>
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-bold mb-12 text-center">Projects</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Project 1 -->
+          <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
+            <h4 class="text-xl font-semibold mb-2">API Configuration Handler</h4>
+            <p class="text-gray-400 text-sm mb-4">
+              A Python-based API configuration management system with YAML/JSON parsing, multi-environment support, and validation features. It ensures reliable deployments by handling configuration overrides, type conversion, and error detection.
+            </p>
+            <a href="https://github.com/karansrawat/API-Configuration-Handler-" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+              View on GitHub <i data-lucide="arrow-right"></i>
+            </a>
+          </article>
 
-    <!-- One grid container for all projects -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <!-- Project 1 -->
-      <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
-        <h4 class="text-xl font-semibold mb-2">API Configuration Handler</h4>
-        <p class="text-gray-400 text-sm mb-4">
-          A Python-based API configuration management system with YAML/JSON parsing, multi-environment support, and validation features. It ensures reliable deployments by handling configuration overrides, type conversion, and error detection.
-        </p>
-        <a href="https://github.com/karansrawat/API-Configuration-Handler-" 
-           class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
-          View on GitHub <i data-lucide="arrow-right"></i>
-        </a>
-      </article>
+          <!-- Project 2 -->
+          <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
+            <h4 class="text-xl font-semibold mb-2">Budget Tracking System</h4>
+            <p class="text-gray-400 text-sm mb-4">
+              A Python-based personal finance manager using Streamlit and Pandas to track income, categorize expenses, and visualize spending habits. Includes real-time summaries and interactive charts powered by Matplotlib and Plotly.
+            </p>
+            <a href="https://github.com/karansrawat/budget_tracking" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+              View on GitHub <i data-lucide="arrow-right"></i>
+            </a>
+          </article>
 
-      <!-- Project 2 -->
-      <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
-        <h4 class="text-xl font-semibold mb-2">Budget Tracking System</h4>
-        <p class="text-gray-400 text-sm mb-4">
-          A Python-based personal finance manager using Streamlit and Pandas to track income, categorize expenses, and visualize spending habits. Includes real-time summaries and interactive charts powered by Matplotlib and Plotly.
-        </p>
-        <a href="https://github.com/karansrawat/budget_tracking" 
-           class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
-          View on GitHub <i data-lucide="arrow-right"></i>
-        </a>
-      </article>
+          <!-- Project 3 -->
+          <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
+            <h4 class="text-xl font-semibold mb-2">Online Note Sharing System</h4>
+            <p class="text-gray-400 text-sm mb-4">
+              A web application built using PHP and MySQL that enables students and professionals to upload, share, and access educational notes. Features include authentication, file upload/download, and a role-based dashboard for collaborative learning.
+            </p>
+            <a href="https://github.com/karansrawat/OnlineNoteSharing.git" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+              View on GitHub <i data-lucide="arrow-right"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <!-- Project 3 -->
-      <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
-        <h4 class="text-xl font-semibold mb-2">Online Note Sharing System</h4>
-        <p class="text-gray-400 text-sm mb-4">
-          A web application built using PHP and MySQL that enables students and professionals to upload, share, and access educational notes. Features include authentication, file upload/download, and a role-based dashboard for collaborative learning.
-        </p>
-        <a href="https://github.com/karansrawat/OnlineNoteSharing.git" 
-           class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
-          View on GitHub <i data-lucide="arrow-right"></i>
-        </a>
-      </article>
-
-    </div>
-  </div>
-</section>
     <!-- Skills -->
     <section id="skills" class="container mx-auto py-24 px-6 reveal">
       <h3 class="text-3xl font-bold mb-12 text-center">Skills & Tools</h3>
@@ -182,6 +181,7 @@
     © <span id="year"></span> KARAN. Crafted with passion and infinite coffee ☕
   </footer>
 
+  <!-- Firebase script remains unchanged -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
     import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-database.js";
@@ -202,31 +202,18 @@
     const form = document.getElementById("contactForm");
     form.addEventListener("submit", (e) => {
       e.preventDefault(); 
-
       const name = document.getElementById("name").value.trim();
       const email = document.getElementById("email").value.trim();
       const message = document.getElementById("message").value.trim();
-
       const contactRef = ref(db, "contacts");
       const newContact = push(contactRef);
-
-      set(newContact, {
-        name,
-        email,
-        message,
-        timestamp: new Date().toISOString()
-      })
-      .then(() => {
-        alert("Message sent successfully! 😊");
-        form.reset();
-      })
-      .catch((error) => {
-        console.error("Firebase write error:", error);
-        alert("Error sending message.");
-      });
+      set(newContact, { name, email, message, timestamp: new Date().toISOString() })
+      .then(() => { alert("Message sent successfully! 😊"); form.reset(); })
+      .catch((error) => { console.error("Firebase write error:", error); alert("Error sending message."); });
     });
   </script>
 
+  <!-- Mobile menu toggle & reveal animation -->
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       lucide.createIcons();
@@ -234,14 +221,18 @@
       // Reveal animation
       const reveals = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-          }
-        });
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("show"); });
       }, { threshold: 0.2 });
       reveals.forEach(r => observer.observe(r));
+
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menuBtn");
+      const menu = document.getElementById("menu");
+      menuBtn.addEventListener("click", () => menu.classList.toggle("hidden"));
     });
+
+    // Auto update year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
