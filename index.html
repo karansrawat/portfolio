@@ -233,6 +233,19 @@
 
     // Auto update year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
+
+
+     const navLinks = menu.querySelectorAll("a");
+      navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (!menu.classList.contains("hidden")) {
+          menu.classList.add("hidden");
+
+          // Reset icon back to hamburger
+          const icon = menuBtn.querySelector("i");
+          icon.setAttribute("data-lucide", "menu");
+          lucide.createIcons();
+        }
   </script>
 </body>
 </html>
