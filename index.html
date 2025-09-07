@@ -1,222 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Karan Singh Rawat | Software Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="picture.jpg" type="image/icon type">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-      @keyframes float {
-        0%, 100% { transform: translateY(-4px); }
-        50% { transform: translateY(4px); }
-      }
-      .animate-float {
-        animation: float 2s ease-in-out infinite;
-      }
-    </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Singh Rawat | Software Developer Portfolio</title>
+  <link rel="icon" href="picture.jpg" type="image/icon type">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(-4px); }
+      50% { transform: translateY(4px); }
+    }
+    .animate-float {
+      animation: float 2s ease-in-out infinite;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-  <body class="bg-black text-gray-200 font-sans antialiased relative">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur border-b border-white/10">
-      <div class="container mx-auto flex items-center justify-between px-6 py-4">
-        <h1 class="text-2xl font-bold tracking-widest flex items-center gap-2 group">          
-          KARAN
-          <i data-lucide="coffee" class="text-white animate-float group-hover:text-yellow-400 transition"></i>
-        </h1>
-        <nav>
-          <ul class="flex gap-6 text-sm uppercase">
-            <li><a href="#home" class="hover:text-white font-bold">Home</a></li>
-            <li><a href="#about" class="hover:text-white font-bold">About</a></li>
-            <li><a href="#projects" class="hover:text-white font-bold">Projects</a></li>
-            <li><a href="#skills" class="hover:text-white font-bold">Skills</a></li>
-            <li><a href="#contact" class="hover:text-white font-bold">Contact</a></li>
-            <li><a href="#documents" class="hover:text-white font-bold">Resume</a></li>
-            <li><a href="https://open.spotify.com/user/karansr?si=4f0231a6eab24a19" target="_blank" class="hover:text-white font-bold">Spotify</a></li>
-          </ul>
-        </nav>
+<body class="bg-gradient-to-b from-black via-gray-900 to-black text-white font-sans antialiased relative">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur border-b border-white/20">
+    <div class="container mx-auto flex items-center justify-between px-6 py-4">
+      <h1 class="text-2xl font-extrabold tracking-widest flex items-center gap-2 group">          
+        KARAN
+        <i data-lucide="coffee" class="animate-float group-hover:text-gray-400 transition"></i>
+      </h1>
+      <nav>
+        <ul class="flex gap-6 text-sm uppercase font-semibold">
+          <li><a href="#home" class="hover:text-gray-400 transition">Home</a></li>
+          <li><a href="#about" class="hover:text-gray-400 transition">About</a></li>
+          <li><a href="#projects" class="hover:text-gray-400 transition">Projects</a></li>
+          <li><a href="#skills" class="hover:text-gray-400 transition">Skills</a></li>
+          <li><a href="#documents" class="hover:text-gray-400 transition">Resume</a></li>
+          <li><a href="#contact" class="hover:text-gray-400 transition">Contact</a></li>
+          <li><a href="https://open.spotify.com/user/karansr?si=4f0231a6eab24a19" target="_blank" class="hover:text-gray-400 transition">Spotify</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="h-screen flex items-center justify-center text-center relative overflow-hidden">
+      <div class="max-w-2xl px-6">
+        <h2 class="text-6xl font-extrabold mb-6 leading-tight">Hey, I'm <span class="text-gray-200 underline decoration-white whitespace-nowrap">Karan Singh Rawat</span></h2>
+        <p class="text-xl text-gray-300 mb-8">A passionate <span class="text-white font-bold">Software Developer</span> crafting impactful digital experiences.</p>
+        <a href="#projects" class="inline-block bg-white text-black px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition">See My Work</a>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <!-- Hero -->
-      <section id="home" class="h-screen flex items-center justify-center text-center relative overflow-hidden">
-        <div class="max-w-2xl px-6">
-          <h2 class="text-6xl font-extrabold mb-6">Hey, I'm <span class="text-white">Karan Singh Rawat</span></h2>
-          <p class="text-2xl font-light text-gray-400 mb-8">A passionate <span class="font-medium text-white">Software Developer</span> crafting engaging experiences for the web.</p>
-          <a href="#projects" class="inline-block bg-white text-black px-6 py-3 rounded-2xl font-semibold shadow-lg hover:opacity-90 transition">See My Work</a>
+    <!-- About -->
+    <section id="about" class="container mx-auto py-24 px-6 reveal">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-3xl font-bold mb-6 border-b border-white/20 pb-2">About Me</h3>
+          <p class="text-gray-300 leading-relaxed">As a recent graduate with a Master of Computer Application degree, I possess a solid foundation in computer science and hands-on experience in languages like Python, Java, and C++. My project portfolio showcases my ability to manage the entire development lifecycle, from creating a dynamic note-sharing web app with PHP and MySQL to developing a data-driven budget tracker with Streamlit and Pandas. I'm skilled in backend frameworks like Django and Node.js, database management with Oracle SQL, and DevOps practices using Docker and GitHub Actions.</p>
+          <p class="text-gray-300 mt-4">I am driven by a passion for clean code, intuitive design, and continuous learning, always seeking opportunities to apply my skills to solve real-world problems.</p>
         </div>
-      </section>
+        <div class="flex justify-center">
+          <img src="picture.jpg" alt="Karan profile" class="w-72 h-72 object-cover rounded-full border-4 border-white/20 shadow-lg hover:scale-105 transition" />
+        </div>
+      </div>
+    </section>
 
-      <!-- About -->
-      <section id="about" class="container mx-auto py-24 px-6 reveal">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 class="text-3xl font-bold mb-4">About Me</h3>
-            <p class="text-gray-400 leading-relaxed">I'm a creative problem‑solver with a love for clean code and intuitive design. With experience ranging from backend APIs to pixel‑perfect front‑end interfaces, I bridge the gap between functionality and aesthetics.</p>
-            <p class="text-gray-400 mt-4">When I'm not coding, you'll find me exploring new tech, contributing to open‑source, or perfecting the ultimate coffee brew.</p>
+    <!-- Projects -->
+    <section id="projects" class="bg-white/10 py-24 reveal">
+  <div class="container mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-12 text-center">Projects</h3>
+
+    <!-- One grid container for all projects -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <!-- Project 1 -->
+      <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">API Configuration Handler</h4>
+        <p class="text-gray-400 text-sm mb-4">
+          A Python-based API configuration management system with YAML/JSON parsing, multi-environment support, and validation features. It ensures reliable deployments by handling configuration overrides, type conversion, and error detection.
+        </p>
+        <a href="https://github.com/karansrawat/API-Configuration-Handler-" 
+           class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+          View on GitHub <i data-lucide="arrow-right"></i>
+        </a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">Budget Tracking System</h4>
+        <p class="text-gray-400 text-sm mb-4">
+          A Python-based personal finance manager using Streamlit and Pandas to track income, categorize expenses, and visualize spending habits. Includes real-time summaries and interactive charts powered by Matplotlib and Plotly.
+        </p>
+        <a href="https://github.com/karansrawat/budget_tracking" 
+           class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+          View on GitHub <i data-lucide="arrow-right"></i>
+        </a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="bg-black border border-white/20 rounded-2xl shadow-lg p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-semibold mb-2">Online Note Sharing System</h4>
+        <p class="text-gray-400 text-sm mb-4">
+          A web application built using PHP and MySQL that enables students and professionals to upload, share, and access educational notes. Features include authentication, file upload/download, and a role-based dashboard for collaborative learning.
+        </p>
+        <a href="https://github.com/karansrawat/OnlineNoteSharing.git" 
+           class="inline-flex items-center gap-1 text-sm font-medium hover:underline">
+          View on GitHub <i data-lucide="arrow-right"></i>
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+    <!-- Skills -->
+    <section id="skills" class="container mx-auto py-24 px-6 reveal">
+      <h3 class="text-3xl font-bold mb-12 text-center">Skills & Tools</h3>
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 place-items-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-14 hover:scale-125 transition" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-14 hover:scale-125 transition" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-14 hover:scale-125 transition" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="w-14 hover:scale-125 transition" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-14 hover:scale-125 transition" />
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-14 hover:scale-125 transition" />
+      </div>
+    </section>
+
+    <!-- Documents -->
+    <section id="documents" class="bg-white/10 py-24 reveal">
+      <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-bold mb-8 text-center">Resume</h3>
+        <p class="text-center text-gray-400 mb-6">Download my latest resume</p>
+        <div class="max-w-3xl mx-auto space-y-4">
+          <div class="flex justify-between items-center bg-black border border-white/20 px-6 py-4 rounded-xl">
+            <span class="text-white">📄 Karan Singh Rawat (PDF)</span>
+            <a href="karan_singh_rawat_resume.pdf" download class="text-sm font-semibold bg-white text-black px-4 py-2 rounded-full hover:bg-gray-200 transition">Download</a>
           </div>
-          <div class="flex justify-center">
-            <img src="picture.jpg" alt="K profile" class="w-72 h-72 object-cover rounded-full ring-4 ring-white/10 shadow-lg" />
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Projects -->
-      <section id="projects" class="bg-white/5 py-24 reveal">
-        <div class="container mx-auto px-6">
-          <h3 class="text-3xl font-bold mb-8 text-center">Projects</h3>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <article class="bg-black/70 rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition">
-              <div class="p-6">
-                <h4 class="text-xl font-semibold mb-2">Task Manager API</h4>
-                <p class="text-gray-400 text-sm mb-4">Robust Node.js REST API with JWT authentication, MongoDB integration, and full test coverage.</p>
-                <a href="#" class="inline-flex items-center gap-1 text-sm font-medium hover:underline">View on GitHub <i data-lucide="arrow-right"></i></a>
-              </div>
-            </article>
-          </div>
+    <!-- Contact -->
+    <section id="contact" class="bg-white/10 py-24 reveal border-t border-white/20">
+      <div class="container mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-6">Let's Connect</h3>
+        <p class="text-gray-400 mb-8">Got an idea or want to say hi? Drop me a message below 👇</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+          <a href="https://www.linkedin.com/in/karan-singh-rawat/" target="_blank" class="bg-white text-black flex items-center gap-2 px-6 py-3 font-semibold rounded-full shadow hover:bg-gray-200">
+            <i data-lucide="linkedin"></i>LinkedIn
+          </a>
+          <a href="https://github.com/karansrawat" target="_blank" class="bg-white text-black flex items-center gap-2 px-6 py-3 font-semibold rounded-full shadow hover:bg-gray-200">
+            <i data-lucide="github"></i>GitHub
+          </a>
         </div>
-      </section>
+        <form id="contactForm" method="post" class="max-w-xl mx-auto bg-black border border-white/20 rounded-xl p-6 space-y-4">
+          <input type="text" id="name" name="name" placeholder="Name" class="w-full px-4 py-3 rounded-md bg-white/5 text-white placeholder-gray-400 focus:outline-none" required />
+          <input type="email" id="email" name="email" placeholder="Email" class="w-full px-4 py-3 rounded-md bg-white/5 text-white placeholder-gray-400 focus:outline-none" required />
+          <textarea id="message" name="message" placeholder="Message" rows="5" class="w-full px-4 py-3 rounded-md bg-white/5 text-white placeholder-gray-400 focus:outline-none" required></textarea>
+          <button type="submit" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-      <!-- Skills -->
-      <section id="skills" class="container mx-auto py-24 px-6 reveal">
-        <h3 class="text-3xl font-bold mb-8 text-center">Skills & Tools</h3>
-        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 place-items-center">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-14 skill-logo" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="w-14 skill-logo" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="w-14 skill-logo" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="w-14 skill-logo" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="w-14 skill-logo" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-14 skill-logo" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="w-14 skill-logo" />
-          
-        </div>
-      </section>
+  <footer class="text-center py-8 text-xs text-gray-500">
+    © <span id="year"></span> KARAN. Crafted with passion and infinite coffee ☕
+  </footer>
 
-      <!-- Documents -->
-      <section id="documents" class="bg-white/5 py-24 reveal">
-        <div class="container mx-auto px-6">
-          <h3 class="text-3xl font-bold mb-8 text-center text-white">Resume</h3>
-          <p class="text-center text-gray-400 mb-6">You can download my resume</p>
-          <div class="max-w-3xl mx-auto space-y-4">
-            <div class="flex justify-between items-center bg-white/10 px-6 py-4 rounded-xl">
-              <span class="text-white">📄 Karan Singh Rawat (PDF)</span>
-              <a href="karan_singh_rawat_resume.pdf" download class="text-sm font-semibold bg-white text-black px-4 py-2 rounded-xl hover:opacity-90 transition">Download</a>
-            </div>
-          </div>
-        </div>
-      </section>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+    import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-database.js";
 
-      <!-- Contact -->
-      <section id="contact" class="bg-white/5 py-24 reveal border-t border-white/10">
-        <div class="container mx-auto px-6 text-center">
-          <h3 class="text-3xl font-bold mb-6">Let's Talk</h3>
-          <p class="text-gray-400 mb-8">Have an exciting project in mind or just want to say hi? Drop a message!</p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-            <a href="https://www.linkedin.com/in/karan-singh-rawat/" target="_blank" class="bg-white text-black flex items-center gap-2 px-6 py-3 font-semibold rounded-2xl shadow hover:opacity-90">
-              <i data-lucide="linkedin"></i>LinkedIn
-            </a>
-            <a href="https://github.com/karansrawat" target="_blank" class="bg-white text-black flex items-center gap-2 px-6 py-3 font-semibold rounded-2xl shadow hover:opacity-90">
-              <i data-lucide="github"></i>GitHub
-            </a>
-          </div>
-        <form id="contactForm" method="post" class="max-w-xl mx-auto bg-black border border-white/10 rounded-xl p-6 space-y-4">
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            placeholder="Name" 
-            class="w-full px-4 py-3 rounded-md bg-white/5 text-white placeholder-gray-400 focus:outline-none" 
-            required 
-          />
+    const firebaseConfig = {
+      apiKey: "AIzaSyD0DBdl4RouUy5-5MhkMSB9NXHcZ1YhSwE",
+      authDomain: "resumedata-3c6b7.firebaseapp.com",
+      databaseURL: "https://resumedata-3c6b7-default-rtdb.firebaseio.com",
+      projectId: "resumedata-3c6b7",
+      storageBucket: "resumedata-3c6b7.appspot.com",
+      messagingSenderId: "377254735034",
+      appId: "1:377254735034:web:d9f978c6cb3670cb0a2683"
+    };
 
-        <input 
-          type="email" 
-          id="email" 
-          name="email" 
-          placeholder="Email" 
-          class="w-full px-4 py-3 rounded-md bg-white/5 text-white placeholder-gray-400 focus:outline-none" 
-          required 
-        />
-        <textarea 
-          id="message" 
-          name="message" 
-          placeholder="Message" 
-          rows="5" 
-          class="w-full px-4 py-3 rounded-md bg-white/5 text-white placeholder-gray-400 focus:outline-none" 
-          required
-        ></textarea>
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
 
-        <button 
-          type="submit" 
-          class="bg-white text-black px-6 py-3 rounded-md font-semibold hover:opacity-90 transition"
-        >
-          Send Message
-        </button>
-      </form>
-        </div>
-      </section>
-    </main>
-    <footer class="text-center py-8 text-xs text-gray-500">
-      © <span id="year"></span> KARAN. Crafted with passion and infinite coffee.
-    </footer>
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault(); 
 
-    <script type="module">
-  
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-  import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-database.js";
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-  
-  const firebaseConfig = {
-    apiKey: "AIzaSyD0DBdl4RouUy5-5MhkMSB9NXHcZ1YhSwE",
-    authDomain: "resumedata-3c6b7.firebaseapp.com",
-    databaseURL: "https://resumedata-3c6b7-default-rtdb.firebaseio.com",
-    projectId: "resumedata-3c6b7",
-    storageBucket: "resumedata-3c6b7.appspot.com",
-    messagingSenderId: "377254735034",
-    appId: "1:377254735034:web:d9f978c6cb3670cb0a2683"  };
+      const contactRef = ref(db, "contacts");
+      const newContact = push(contactRef);
 
-
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-
-  
-  const form = document.getElementById("contactForm");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault(); 
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    // Push to Firebase
-    const contactRef = ref(db, "contacts");
-    const newContact = push(contactRef);
-
-    set(newContact, {
-      name,
-      email,
-      message,
-      timestamp: new Date().toISOString()
-    })
-    .then(() => {
-      alert("Message sent successfully! 😊");
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("Firebase write error:", error);
-      alert("Error sending message.");
+      set(newContact, {
+        name,
+        email,
+        message,
+        timestamp: new Date().toISOString()
+      })
+      .then(() => {
+        alert("Message sent successfully! 😊");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Firebase write error:", error);
+        alert("Error sending message.");
+      });
     });
-  });
-  
-</script>
+  </script>
 
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    lucide.createIcons();
-  });
-</script>
-  </body>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      lucide.createIcons();
+
+      // Reveal animation
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      }, { threshold: 0.2 });
+      reveals.forEach(r => observer.observe(r));
+    });
+  </script>
+</body>
 </html>
